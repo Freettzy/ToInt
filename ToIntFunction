@@ -1,0 +1,16 @@
+namespace ToInt;
+
+public static class Facilities
+{
+    private static int ToInt(this string text)
+    {
+        var result = 0;
+
+        for (var i = 0; i < text.Length; i++)
+        {
+            var asciiCode = text[i] - 0;
+            result += (asciiCode - 48) * 10 ^ i;
+        }
+        return result;
+    }
+}
